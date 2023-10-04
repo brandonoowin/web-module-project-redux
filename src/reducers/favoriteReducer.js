@@ -17,7 +17,7 @@ const reducer = (state = initialState, action) => {
             console.log(action.payload);
             return({
                 ...state, 
-                favorites: [...state.favorites, action.payload]  
+                favorites: state.favorites.includes(action.payload) ? [...state.favorites] : [...state.favorites, action.payload]  
             })
 
         case REMOVE_FAVORITE:
