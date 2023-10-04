@@ -5,12 +5,13 @@ import { Provider, connect } from 'react-redux';
 
 
 import reducer from './reducers';
+import rootReducer from './reducers/index'
 
 import App from './components/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
